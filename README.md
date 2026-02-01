@@ -189,3 +189,8 @@ The following table maps observed lab evidence (screenshots and command outputs)
 
 ## ⚠️ Disclaimer
 This project is for **educational and defensive security research only**. No real-world systems were targeted.
+
+---
+## ❤️ Author
+
+Created by **Jeytha Sahana** 
