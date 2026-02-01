@@ -1,0 +1,28 @@
+version: "3.8"
+
+services:
+  openplc:
+    image: tuttas/openplc_v3
+    container_name: openplc
+    privileged: true
+    ports:
+      - "502:502"   # Modbus exposed ONLY for now
+    networks:
+      - ot_net
+
+  hmi:
+    image: nodered/node-red:latest
+    container_name: hmi
+    ports:
+      - "1880:1880"
+    security_opt:
+      - seccomp:unconfined
+    networks:
+      - dmz_net
+      - ot_net
+
+networks:
+  ot_net:
+    internal: true
+  dmz_net:
+    driver: bridge
