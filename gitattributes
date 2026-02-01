@@ -1,0 +1,5 @@
+# Force correct language classification for IEC 61131-3 Structured Text
+# GitHub Linguist may otherwise misclassify .st files as Smalltalk
+
+*.st linguist-language=IEC-61131-3
+*.st linguist-detectable=true
