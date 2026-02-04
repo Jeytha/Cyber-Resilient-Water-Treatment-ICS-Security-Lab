@@ -1,13 +1,13 @@
 #  Cyber-Resilient Water Treatment ICS Security Lab
 
-## 📌 Overview
+##  Overview
 This project is a **hands-on Industrial Control Systems (ICS) / OT security lab** that simulates a **water treatment plant** and demonstrates **realistic cyber attacks, segmentation, and defensive controls** aligned with **IEC 62443** and **NIST 800-82**.
 
 The lab intentionally mirrors **real OT constraints**: minimal tooling, unauthenticated industrial protocols, and safety-critical logic. Validation is done through **protocol behavior**, not GUI indicators.
 
 ---
 
-## 🎯 Objectives
+##  Objectives
 - Build a functioning **PLC-controlled industrial process**
 - Expose and exploit **Modbus TCP weaknesses**
 - Implement **zone-and-conduit network segmentation**
@@ -16,7 +16,7 @@ The lab intentionally mirrors **real OT constraints**: minimal tooling, unauthen
 
 ---
 
-## 🧱 Architecture
+##  Architecture
 
 ### Zones (IEC 62443)
 ```
