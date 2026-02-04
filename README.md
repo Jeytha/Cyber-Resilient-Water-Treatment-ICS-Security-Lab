@@ -1,4 +1,4 @@
-# 🏭 Cyber-Resilient Water Treatment ICS Security Lab
+#  Cyber-Resilient Water Treatment ICS Security Lab
 
 ## 📌 Overview
 This project is a **hands-on Industrial Control Systems (ICS) / OT security lab** that simulates a **water treatment plant** and demonstrates **realistic cyber attacks, segmentation, and defensive controls** aligned with **IEC 62443** and **NIST 800-82**.
