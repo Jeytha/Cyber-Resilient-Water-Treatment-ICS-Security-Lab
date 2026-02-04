@@ -21,7 +21,7 @@ The lab intentionally mirrors **real OT constraints**: minimal tooling, unauthen
 ### Zones (IEC 62443)
 ```
 IT Zone (Host VM)
-   ❌ No direct OT access
+    No direct OT access
 
 DMZ Zone
    └── HMI (Node-RED)
@@ -41,7 +41,7 @@ Firewall enforcement is implemented using **iptables `DOCKER-USER` chain** with 
 
 ---
 
-## ⚙️ Components
+##  Components
 
 ### PLC (OT Zone)
 - **OpenPLC Runtime** (`tuttas/openplc_v3`)
@@ -60,7 +60,7 @@ Firewall enforcement is implemented using **iptables `DOCKER-USER` chain** with 
 
 ---
 
-## 🧠 PLC Logic (Structured Text)
+##  PLC Logic (Structured Text)
 
 ```pascal
 PROGRAM WaterTreatment
@@ -91,7 +91,7 @@ END_IF;
 
 ---
 
-## 🔥 Attack Demonstrated
+##  Attack Demonstrated
 
 ### Modbus Command Injection
 An attacker writes directly to PLC coils using Modbus TCP, bypassing control logic.
@@ -105,7 +105,7 @@ client.connect()
 # Force chlorine valve ON (coil 1)
 client.write_coil(1, True)
 
-print("⚠️ Chlorine valve forced ON")
+print(" Chlorine valve forced ON")
 
 client.close()
 
@@ -122,7 +122,7 @@ Mapped to **MITRE ATT&CK for ICS – Unauthorized Command Message**.
 
 ---
 
-## 🔐 Network Segmentation Controls
+##  Network Segmentation Controls
 
 ### Docker Networks
 - `ot_net` (internal, PLC only)
@@ -137,7 +137,7 @@ This enforces **zone-and-conduit architecture** consistent with **IEC 62443**.
 
 ---
 
-## ✅ Validation Strategy (ICS-Correct)
+##  Validation Strategy (ICS-Correct)
 
 ---
 <img width="686" height="612" alt="image" src="https://github.com/user-attachments/assets/2c4edf19-2943-4a8c-bcd6-08d35bfeb577" />
@@ -146,7 +146,7 @@ This enforces **zone-and-conduit architecture** consistent with **IEC 62443**.
 <img width="709" height="651" alt="image" src="https://github.com/user-attachments/assets/0737af7b-b3ea-457f-94dd-2e2879d70aa5" />
 <img width="700" height="582" alt="image" src="https://github.com/user-attachments/assets/0b43ab53-79e8-4826-bf1c-c42a278f12db" />
 
-## 🔎 Overall Alignment Summary
+##  Overall Alignment Summary
 
 The following table maps observed lab evidence (screenshots and command outputs) directly to the claims made in this README. Failed raw TCP tests are **intentional and expected** in ICS environments and are documented to demonstrate correct OT validation methodology.
 
@@ -163,7 +163,7 @@ The following table maps observed lab evidence (screenshots and command outputs)
 
 ---
 
-## 🧠 Key Lessons Demonstrated
+##  Key Lessons Demonstrated
 - OT systems are **not general-purpose OSes**
 - Security prioritizes **safety and availability**
 - Allow-listing is mandatory in ICS networks
@@ -171,14 +171,14 @@ The following table maps observed lab evidence (screenshots and command outputs)
 
 ---
 
-## 📊 Standards Alignment
+##  Standards Alignment
 - **IEC 62443** – Zones, conduits, least privilege
 - **NIST SP 800-82** – ICS architecture and segmentation
 - **MITRE ATT&CK for ICS** – Unauthorized command execution
 
 ---
 
-## 🚀 Future Enhancements
+##  Future Enhancements
 - PLC fail-safe safety interlocks
 - Process-aware anomaly detection
 - OT IDS for Modbus write detection
@@ -187,7 +187,7 @@ The following table maps observed lab evidence (screenshots and command outputs)
 
 ---
 
-## ⚠️ Disclaimer
+##  Disclaimer
 This project is for **educational and defensive security research only**. No real-world systems were targeted.
 
 ---
