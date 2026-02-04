@@ -150,15 +150,15 @@ This enforces **zone-and-conduit architecture** consistent with **IEC 62443**.
 
 The following table maps observed lab evidence (screenshots and command outputs) directly to the claims made in this README. Failed raw TCP tests are **intentional and expected** in ICS environments and are documented to demonstrate correct OT validation methodology.
 
-| Screenshot Category | Result  | README Claim                          | Alignment |
-|--------------------|---------|----------------------------------------|-----------|
-| Modbus read/write  | Success | Protocol-level validation              | ✅        |
-| Attack script      | Success | Unauthorized Modbus command injection  | ✅        |
-| Docker networks    | Visible | Zone-based network separation          | ✅        |
-| iptables rules     | Enforced| IEC 62443 zone-and-conduit enforcement | ✅        |
-| Raw TCP failures   | Fail    | Expected OT protocol behavior          | ✅        |
+| Screenshot Category | Result  | README Claim                          | 
+|--------------------|---------|----------------------------------------|
+| Modbus read/write  | Success | Protocol-level validation              | 
+| Attack script      | Success | Unauthorized Modbus command injection  | 
+| Docker networks    | Visible | Zone-based network separation          | 
+| iptables rules     | Enforced| IEC 62443 zone-and-conduit enforcement |     
+| Raw TCP failures   | Fail    | Expected OT protocol behavior          |        
 
-> **Note:** In ICS environments, protocol-aware validation (e.g., Modbus read/write success) is the authoritative indicator of system functionality. Generic TCP connectivity tests (`nc`, `/dev/tcp`) are unreliable for PLCs and are intentionally included here to demonstrate this distinction.
+
 
 
 ---
